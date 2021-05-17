@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "2xs"
+version = "0.1.0"
+description = ""
+authors = ["Wesley Mendes <wesley_gto_x@yahoo.com.br>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Django = "^3.2.3"
+djangorestframework = "^3.12.4"
+Markdown = "^3.3.4"
+python-decouple = "^3.4"
+django-extensions = "^3.1.3"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+flake8 = "^3.9.2"
+pytest-flake8 = "^1.0.7"
+pytest-cov = "^2.12.0"
+pytest-pythonpath = "^0.7.3"
+ipdb = "^0.13.7"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
