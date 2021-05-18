@@ -24,13 +24,14 @@ class EquipmentViewSet(viewsets.ModelViewSet):
         """
         Setting an equipment’s status to inactive.
         """
-        codes = request.data.getlist('codes', [])
+        codes = dict(request.data)
+        codes_list = codes.get('codes', [])
 
-        if len(codes) == 0:
+        if len(codes_list) == 0:
             error = dict(status=400, error={'message': 'One or more equipment code must be inputted.'})
             return response.Response(error, status=status.HTTP_400_BAD_REQUEST)
 
-        equipments = Equipment.objects.filter(code__in=codes)
+        equipments = Equipment.objects.filter(code__in=codes_list)
 
         if equipments.count() == 0:
             error = dict(status=404, error={'message': 'No equipment code found.'})
