@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'django_extensions',
     # my apps
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -112,3 +113,8 @@ MEDIA_URL = '/media/'
 # Default primary key field type
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Replace auth user model
+
+AUTH_USER_MODEL = 'users.User'
