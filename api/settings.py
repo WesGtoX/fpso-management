@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     # my apps
     'users',
     'vessel',
+    'equipment',
 ]
 
 MIDDLEWARE = [
