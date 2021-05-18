@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'django_extensions',
     # my apps
     'users',
+    'vessel',
 ]
 
 MIDDLEWARE = [
