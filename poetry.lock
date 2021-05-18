@@ -383,6 +383,21 @@ pytest = ">=4.6"
 testing = ["fields", "hunter", "process-tests (==2.0.2)", "six", "pytest-xdist", "virtualenv"]
 
 [[package]]
+name = "pytest-django"
+version = "4.3.0"
+description = "A Django plugin for pytest."
+category = "dev"
+optional = false
+python-versions = ">=3.5"
+
+[package.dependencies]
+pytest = ">=5.4.0"
+
+[package.extras]
+docs = ["sphinx", "sphinx-rtd-theme"]
+testing = ["django", "django-configurations (>=2.0)"]
+
+[[package]]
 name = "pytest-flake8"
 version = "1.0.7"
 description = "pytest plugin to check FLAKE8 requirements"
@@ -462,7 +477,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "75dbe342aec1ab47123d99fa0bc33b5c145b99f5237bf9defbd1eb6db170bc9e"
+content-hash = "2648aa78d20549af90be633e2a223dffefe6ff850558cbb3f3265962e045cf2b"
 
 [metadata.files]
 appnope = [
@@ -649,6 +664,10 @@ pytest = [
 pytest-cov = [
     {file = "pytest-cov-2.12.0.tar.gz", hash = "sha256:8535764137fecce504a49c2b742288e3d34bc09eed298ad65963616cc98fd45e"},
     {file = "pytest_cov-2.12.0-py2.py3-none-any.whl", hash = "sha256:95d4933dcbbacfa377bb60b29801daa30d90c33981ab2a79e9ab4452c165066e"},
+]
+pytest-django = [
+    {file = "pytest-django-4.3.0.tar.gz", hash = "sha256:d1c6758a592fb0ef8abaa2fe12dd28858c1dcfc3d466102ffe52aa8934733dca"},
+    {file = "pytest_django-4.3.0-py3-none-any.whl", hash = "sha256:f96c4556f4e7b15d987dd1dcc1d1526df81d40c1548d31ce840d597ed2be8c46"},
 ]
 pytest-flake8 = [
     {file = "pytest-flake8-1.0.7.tar.gz", hash = "sha256:f0259761a903563f33d6f099914afef339c085085e643bee8343eb323b32dd6b"},
